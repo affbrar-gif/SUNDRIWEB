@@ -1,1 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sundri — Privacy Policy</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #F5ECD7;
+      color: #1A1F3D;
+      line-height: 1.7;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 24px;
+      border-bottom: 2px solid #C8972B;
+    }
+    .gurmukhi {
+      font-size: 48px;
+      color: #C8972B;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    h1 {
+      font-size: 32px;
+      margin: 0;
+      letter-spacing: 1px;
+      font-style: italic;
+      color: #1A1F3D;
+    }
+    .meta {
+      font-size: 13px;
+      color: rgba(26, 31, 61, 0.6);
+      margin-top: 8px;
+    }
+    h2 {
+      color: #1A1F3D;
+      font-size: 22px;
+      margin-top: 40px;
+      margin-bottom: 12px;
+      border-left: 4px solid #C8972B;
+      padding-left: 12px;
+    }
+    h3 {
+      font-size: 17px;
+      margin-top: 24px;
+      color: #1A1F3D;
+    }
+    p, li {
+      font-size: 15px;
+    }
+    a {
+      color: #8B1A2E;
+      text-decoration: none;
+      border-bottom: 1px solid #8B1A2E;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid rgba(26, 31, 61, 0.1);
+    }
+    th {
+      background: rgba(200, 151, 43, 0.1);
+      color: #1A1F3D;
+    }
+    code {
+      background: rgba(26, 31, 61, 0.06);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 13px;
+    }
+    strong { color: #1A1F3D; }
+    .contact {
+      margin-top: 40px;
+      padding: 24px;
+      background: rgba(200, 151, 43, 0.1);
+      border-radius: 12px;
+      border-left: 4px solid #C8972B;
+    }
+    .contact p { margin: 4px 0; }
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 13px;
+      color: rgba(26, 31, 61, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="gurmukhi">ਸੁੰਦਰੀ</div>
+      <h1>Sundri</h1>
+      <div class="meta">Privacy Policy · Last updated: 15 May 2026</div>
+    </div>
 
+    <p>Sundri (<strong>"we"</strong>, <strong>"us"</strong>, <strong>"the app"</strong>) is a Punjabi suit discovery and inspiration app developed by Harman (<strong>"the developer"</strong>), based in Queenstown, New Zealand. This Privacy Policy explains what information we collect, why we collect it, and how it's stored.</p>
+
+    <h2>1. Information We Collect</h2>
+    
+    <h3>Information you give us</h3>
+    <ul>
+      <li><strong>Phone number.</strong> Required to create an account and sign in. Used solely for authentication via one-time SMS codes.</li>
+      <li><strong>Display name (optional).</strong> Shown only to you within the app.</li>
+    </ul>
+
+    <h3>Information collected automatically</h3>
+    <ul>
+      <li><strong>Saved looks.</strong> When you tap the heart icon on a suit, we record the suit ID and timestamp linked to your account so your shortlist syncs across devices.</li>
+      <li><strong>Anonymous usage events.</strong> When you view, swipe, save, or share a suit, we log the event. Used only to improve which suits we surface.</li>
+      <li><strong>Device push token (optional).</strong> If you enable notifications, we store the token issued by Apple/Google so we can deliver notifications.</li>
+    </ul>
+
+    <h3>What we don't collect</h3>
+    <ul>
+      <li>We do not collect your name (unless you choose to enter one), email, photos, contacts, location, or biometric data.</li>
+      <li>We do not access your camera, microphone, photo library, or contacts.</li>
+      <li>We do not track you across other apps or websites.</li>
+      <li>We do not sell your data. Ever.</li>
+    </ul>
+
+    <h2>2. How We Use Your Information</h2>
+    <table>
+      <thead>
+        <tr><th>Information</th><th>Purpose</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Phone number</td><td>Sign-in via SMS one-time code; preventing duplicate accounts</td></tr>
+        <tr><td>Display name</td><td>Personalising the greeting in the app</td></tr>
+        <tr><td>Saved suits</td><td>Showing your shortlist on every device you sign in on</td></tr>
+        <tr><td>Usage events</td><td>Improving which suits we generate and surface</td></tr>
+        <tr><td>Push token</td><td>Sending the optional daily notification</td></tr>
+      </tbody>
+    </table>
+    <p>We do not use your information for advertising, profiling, or any purpose beyond running the app.</p>
+
+    <h2>3. How We Store and Protect Your Information</h2>
+    <ul>
+      <li><strong>Database:</strong> Supabase (PostgreSQL), hosted in Mumbai, India.</li>
+      <li><strong>Images:</strong> Cloudflare R2 (object storage).</li>
+      <li><strong>SMS delivery:</strong> Twilio.</li>
+      <li><strong>Push delivery:</strong> Apple Push Notification service / Firebase Cloud Messaging via Expo Push Service.</li>
+    </ul>
+    <p>All connections use HTTPS/TLS. Database access is restricted by Row-Level Security policies so users can only access their own data. We retain your data only as long as your account is active. If you delete your account or request deletion, all your data is permanently erased within 30 days.</p>
+
+    <h2>4. Sharing With Third Parties</h2>
+    <p>We share information only with the service providers strictly required to operate the app:</p>
+    <ul>
+      <li><strong>Supabase Inc.</strong> (database hosting) — stores your account row, saved suits, profile.</li>
+      <li><strong>Cloudflare Inc.</strong> (image delivery) — serves images to your device. Does not receive your account information.</li>
+      <li><strong>Twilio Inc.</strong> (SMS delivery) — receives your phone number to deliver the one-time code.</li>
+      <li><strong>Apple Inc. / Google LLC / Expo</strong> (push notification delivery) — receives your device token and notification content.</li>
+    </ul>
+    <p>We do not share your data with advertisers, brokers, analytics platforms, or any other parties.</p>
+
+    <h2>5. Your Rights</h2>
+    <p>You can, at any time:</p>
+    <ul>
+      <li>View and edit your name from the Account screen</li>
+      <li>Turn off notifications from the Account screen</li>
+      <li>Sign out to immediately stop collection</li>
+      <li>Request account deletion by emailing us — deleted within 30 days</li>
+      <li>Request a copy of your data by emailing us</li>
+    </ul>
+    <p>If you are a resident of the European Union, United Kingdom, or California, you may have additional rights under GDPR / UK GDPR / CCPA, including the right to access, rectify, restrict, or object to processing of your data. Contact us to exercise any of these rights.</p>
+
+    <h2>6. Children</h2>
+    <p>Sundri is not directed at children under 13. We do not knowingly collect information from children under 13. If you believe a child has provided us information, contact us and we will delete it.</p>
+
+    <h2>7. Security</h2>
+    <p>We protect your information using industry-standard practices:</p>
+    <ul>
+      <li>HTTPS/TLS for all network requests</li>
+      <li>Row-Level Security on database tables</li>
+      <li>Authentication tokens stored in secure device storage (iOS Keychain / Android Keystore)</li>
+      <li>Phone OTP codes expire after 60 seconds</li>
+      <li>No passwords stored — sign-in is via one-time SMS code only</li>
+    </ul>
+    <p>No system is perfectly secure, but we take reasonable care.</p>
+
+    <h2>8. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy occasionally. If we make a material change, we will notify you in-app before the change takes effect. The "Last updated" date at the top reflects the most recent revision.</p>
+
+    <h2>9. Contact</h2>
+    <div class="contact">
+      <p><strong>Harman</strong></p>
+      <p>Sundri App</p>
+      <p>Email: <a href="mailto:heyrajbrar@gmail.com">heyrajbrar@gmail.com</a></p>
+      <p>Based in: Queenstown, New Zealand</p>
+    </div>
+
+    <div class="footer">
+      ਸੁੰਦਰੀ · Made with love in Aotearoa
+    </div>
+  </div>
+</body>
+</html>
