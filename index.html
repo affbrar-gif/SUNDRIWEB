@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sundri — Discover Punjabi Suits</title>
+  <meta name="description" content="A daily dose of beautiful Punjabi suit inspiration. Anarkalis, palazzos, sharara sets, bridal looks — handpicked every day.">
+  <meta property="og:title" content="Sundri — Discover Punjabi Suits">
+  <meta property="og:description" content="A daily dose of beautiful Punjabi suit inspiration.">
+  <meta property="og:url" content="https://sundri.app">
+  <meta property="og:type" content="website">
   <style>
     body {
       margin: 0;
@@ -54,9 +59,21 @@
       font-size: 14px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
+      transition: all 0.2s ease;
     }
     .badge:hover {
       background: rgba(200, 151, 43, 0.2);
+      transform: translateY(-2px);
+    }
+    .badge.disabled {
+      background: rgba(245, 236, 215, 0.04);
+      border-color: rgba(245, 236, 215, 0.25);
+      color: rgba(245, 236, 215, 0.45);
+      cursor: not-allowed;
+    }
+    .badge.disabled:hover {
+      background: rgba(245, 236, 215, 0.04);
+      transform: none;
     }
     footer {
       position: fixed;
@@ -74,8 +91,8 @@
     A daily dose of beautiful Punjabi suit inspiration. Anarkalis, palazzos, sharara sets, bridal looks — handpicked every day.
   </p>
   <div class="badges">
-    <a href="#" class="badge">Coming to App Store</a>
-    <a href="#" class="badge">Coming to Play Store</a>
+    <a href="https://apps.apple.com/app/id6769266287" class="badge" target="_blank" rel="noopener">Download on App Store</a>
+    <span class="badge disabled" aria-disabled="true">Coming to Play Store</span>
   </div>
   <footer>
     Made in Aotearoa · <a href="/privacy.html">Privacy</a> · <a href="mailto:hello@sundri.app">hello@sundri.app</a>
