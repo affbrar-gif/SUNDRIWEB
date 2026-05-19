@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sundri — Open in App</title>
+  <meta name="description" content="View this Punjabi suit in the Sundri app.">
+  <meta property="og:title" content="Sundri — Punjabi Suit Inspiration">
+  <meta property="og:description" content="A daily dose of beautiful Punjabi suit inspiration.">
+  <meta property="og:type" content="website">
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(180deg, #1A1F3D 0%, #0A0700 100%);
+      color: #F5ECD7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 56px;
+      color: #C8972B;
+      font-style: italic;
+      margin: 0 0 8px;
+      letter-spacing: 3px;
+    }
+    .gurmukhi {
+      font-size: 44px;
+      color: #C8972B;
+      margin-bottom: 12px;
+    }
+    .tagline {
+      font-size: 16px;
+      color: rgba(245, 236, 215, 0.7);
+      max-width: 380px;
+      line-height: 1.6;
+      letter-spacing: 0.5px;
+      margin-bottom: 32px;
+    }
+    .opening {
+      font-size: 14px;
+      color: rgba(200, 151, 43, 0.8);
+      margin-bottom: 24px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      min-height: 20px;
+    }
+    .badges {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .badge {
+      padding: 14px 24px;
+      background: rgba(200, 151, 43, 0.12);
+      border: 1px solid #C8972B;
+      border-radius: 14px;
+      color: #C8972B;
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      transition: all 0.2s ease;
+    }
+    .badge:hover {
+      background: rgba(200, 151, 43, 0.2);
+      transform: translateY(-2px);
+    }
+    .badge.disabled {
+      background: rgba(245, 236, 215, 0.04);
+      border-color: rgba(245, 236, 215, 0.25);
+      color: rgba(245, 236, 215, 0.45);
+      cursor: not-allowed;
+    }
+    .badge.disabled:hover {
+      background: rgba(245, 236, 215, 0.04);
+      transform: none;
+    }
+    footer {
+      position: fixed;
+      bottom: 24px;
+      font-size: 12px;
+      color: rgba(245, 236, 215, 0.4);
+    }
+    footer a { color: rgba(200, 151, 43, 0.6); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="gurmukhi">ਸੁੰਦਰੀ</div>
+  <h1>Sundri</h1>
+  <p class="tagline">
+    A daily dose of beautiful Punjabi suit inspiration. Anarkalis, palazzos, sharara sets, bridal looks — handpicked every day.
+  </p>
+  <div class="opening" id="status"></div>
+  <div class="badges">
+    <a href="https://apps.apple.com/app/id6769266287" class="badge" id="appStoreBtn" target="_blank" rel="noopener">Download on App Store</a>
+    <span class="badge disabled" aria-disabled="true">Coming to Play Store</span>
+  </div>
+  <footer>
+    Made in Aotearoa · <a href="/privacy.html">Privacy</a> · <a href="mailto:hello@sundri.app">hello@sundri.app</a>
+  </footer>
+
+  <script>
+    (function () {
+      var path = window.location.pathname;
+      var match = path.match(/^\/suit\/([a-f0-9-]+)/i);
+      var suitId = match ? match[1] : null;
+
+      var ua = navigator.userAgent || '';
+      var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
+      var isAndroid = /android/i.test(ua);
+      var statusEl = document.getElementById('status');
+
+      if (suitId && isIOS) {
+        statusEl.textContent = 'Opening Sundri…';
+        var deepLink = 'sundri://suit/' + suitId;
+        var appStoreUrl = 'https://apps.apple.com/app/id6769266287';
+
+        var fallbackTimer = setTimeout(function () {
+          window.location.href = appStoreUrl;
+        }, 1500);
+
+        window.addEventListener('pagehide', function () {
+          clearTimeout(fallbackTimer);
+        });
+        window.addEventListener('blur', function () {
+          clearTimeout(fallbackTimer);
+        });
+
+        window.location.href = deepLink;
+      } else if (suitId && isAndroid) {
+        statusEl.textContent = 'Sundri is coming to Android soon';
+      } else if (suitId) {
+        statusEl.textContent = 'Open this on your phone to view in the app';
+      }
+    })();
+  </script>
+</body>
+</html>
