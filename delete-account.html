@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Delete Your Account — Sundri</title>
+<meta name="description" content="How to delete your Sundri account and all associated personal data.">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --indigo: #1A1F3D;
+    --gold: #C8972B;
+    --red: #8B1A2E;
+    --cream: #F5ECD7;
+    --cream-soft: #FAF5E8;
+    --ink: #2A2618;
+    --muted: #6B6358;
+    --line: #E8DFC9;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--cream-soft);
+    color: var(--ink);
+    line-height: 1.65;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  header {
+    background: var(--indigo);
+    color: var(--cream);
+    padding: 48px 24px 56px;
+    text-align: center;
+    border-bottom: 2px solid var(--gold);
+  }
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 38px;
+    color: var(--gold);
+    letter-spacing: 0.5px;
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 28px;
+    color: var(--cream);
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    font-size: 14px;
+    color: var(--cream);
+    opacity: 0.75;
+    letter-spacing: 0.3px;
+  }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  section { margin-bottom: 36px; }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--indigo);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--gold);
+  }
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--red);
+    margin-bottom: 10px;
+  }
+  p { margin-bottom: 12px; font-size: 15px; }
+  ul { margin: 8px 0 12px 22px; font-size: 15px; }
+  li { margin-bottom: 6px; }
+  strong { color: var(--indigo); font-weight: 500; }
+
+  .intro {
+    background: white;
+    border-left: 3px solid var(--gold);
+    padding: 16px 20px;
+    border-radius: 4px;
+    margin-bottom: 32px;
+    font-size: 15px;
+  }
+
+  .cta-box {
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 20px 22px;
+    margin: 14px 0;
+  }
+
+  .email-btn {
+    display: inline-block;
+    background: var(--indigo);
+    color: var(--cream);
+    padding: 12px 22px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.3px;
+    margin-top: 8px;
+    transition: background 0.15s;
+  }
+  .email-btn:hover { background: var(--red); }
+
+  .badge {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--indigo);
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .badge-soft {
+    background: var(--line);
+    color: var(--muted);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 16px;
+    font-size: 14px;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  th, td {
+    text-align: left;
+    padding: 11px 14px;
+    border-bottom: 1px solid var(--line);
+  }
+  tr:last-child td { border-bottom: none; }
+  th {
+    background: var(--cream);
+    color: var(--indigo);
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+  }
+  td:first-child { font-weight: 500; color: var(--indigo); }
+  .yes { color: var(--red); font-weight: 500; }
+
+  .contact-email {
+    color: var(--red);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .contact-email:hover { text-decoration: underline; }
+
+  footer {
+    background: var(--indigo);
+    color: var(--cream);
+    text-align: center;
+    padding: 28px 24px;
+    font-size: 13px;
+  }
+  footer a {
+    color: var(--gold);
+    text-decoration: none;
+    margin: 0 12px;
+  }
+  footer a:hover { text-decoration: underline; }
+  .footer-meta {
+    opacity: 0.6;
+    margin-top: 12px;
+    font-size: 12px;
+  }
+
+  @media (max-width: 480px) {
+    header { padding: 36px 20px 44px; }
+    .brand { font-size: 32px; }
+    h1 { font-size: 24px; }
+    h2 { font-size: 22px; }
+    main { padding: 24px 18px 48px; }
+    .cta-box { padding: 16px 18px; }
+    table { font-size: 13px; }
+    th, td { padding: 9px 11px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="brand">Sundri</div>
+  <h1>Delete Your Account</h1>
+  <div class="subtitle">Your data, your choice</div>
+</header>
+
+<main>
+
+  <div class="intro">
+    You can request deletion of your Sundri account and all data associated with it at any time. This page explains how to request deletion, what gets removed, what may be retained, and how long the process takes.
+  </div>
+
+  <section>
+    <h2>How to request deletion</h2>
+
+    <div class="cta-box">
+      <h3>Option 1 — Email request <span class="badge">Available now</span></h3>
+      <p>Send a deletion request to the address below. Please include the phone number associated with your Sundri account so we can identify and remove your data.</p>
+      <a class="email-btn" href="mailto:heyrajbrar@gmail.com?subject=Sundri%20Account%20Deletion%20Request&body=Hello%2C%0A%0AI%20would%20like%20to%20delete%20my%20Sundri%20account%20and%20all%20associated%20data.%0A%0APhone%20number%20on%20account%3A%20%2B__________%0A%0APreferred%20deletion%20scope%20(tick%20one)%3A%0A%5B%20%5D%20Delete%20everything%20(account%20%2B%20all%20data%20%2B%20anonymized%20analytics)%0A%5B%20%5D%20Delete%20account%20only%20(keep%20anonymized%20aggregate%20analytics)%0A%0AReason%20(optional)%3A%0A%0AThank%20you.">
+        Email a deletion request
+      </a>
+    </div>
+
+    <div class="cta-box">
+      <h3>Option 2 — In-app <span class="badge badge-soft">Coming soon</span></h3>
+      <p>A self-service "Delete my account" button will be added to the Account screen in a future app update. Until then, please use the email option above.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>What gets deleted</h2>
+    <p>When we process your request, the following are permanently removed from our systems:</p>
+    <table>
+      <thead>
+        <tr><th>Data</th><th>Deleted?</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Phone number</td><td class="yes">Yes</td></tr>
+        <tr><td>Display name</td><td class="yes">Yes</td></tr>
+        <tr><td>Push notification token</td><td class="yes">Yes</td></tr>
+        <tr><td>Push opt-in preference</td><td class="yes">Yes</td></tr>
+        <tr><td>Saved suits</td><td class="yes">Yes</td></tr>
+        <tr><td>Swipe history</td><td class="yes">Yes</td></tr>
+        <tr><td>In-app event history tied to your account</td><td class="yes">Yes</td></tr>
+        <tr><td>Account record itself</td><td class="yes">Yes</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>What may be retained</h2>
+    <p>Some information may be retained after deletion in line with Google Play and Apple App Store policy:</p>
+    <ul>
+      <li><strong>Anonymized aggregate analytics</strong> — counts, trends, and patterns that cannot be linked back to you as an individual. These help us understand how the app is used in general.</li>
+      <li><strong>Data required by law</strong> — if a legal or regulatory obligation requires us to retain specific records (e.g. fraud investigation, security incident logs), we retain only the minimum required, only for as long as required.</li>
+    </ul>
+    <p>If you'd prefer that your contribution to anonymized analytics also be removed, please mention this in your deletion email and we'll honour it.</p>
+  </section>
+
+  <section>
+    <h2>How long it takes</h2>
+    <p>Account and data deletion requests are processed within <strong>30 days</strong> of receipt. You will receive an email confirmation once the deletion is complete.</p>
+  </section>
+
+  <section>
+    <h2>Account-only vs full deletion</h2>
+    <p>In your deletion email, you can specify either of the following:</p>
+    <ul>
+      <li><strong>Delete everything</strong> — account, all profile data, saves, swipes, in-app activity, and your contribution to anonymized aggregate analytics.</li>
+      <li><strong>Delete account only</strong> — remove your phone, name, and other identifiable data; allow your contribution to anonymized aggregate analytics to remain.</li>
+    </ul>
+    <p>If you don't specify, we default to deleting everything.</p>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>Questions about deletion or data handling?</p>
+    <p><strong>Email:</strong> <a class="contact-email" href="mailto:heyrajbrar@gmail.com">heyrajbrar@gmail.com</a></p>
+    <p><strong>Developer:</strong> Sundri (Harman Brar)</p>
+    <p><strong>App:</strong> Sundri — Punjabi Suit Discovery</p>
+  </section>
+
+</main>
+
+<footer>
+  <div>
+    <a href="/privacy.html">Privacy Policy</a>
+    <a href="/terms.html">Terms of Use</a>
+    <a href="/">Home</a>
+  </div>
+  <div class="footer-meta">
+    © 2026 Sundri · Last updated: 25 May 2026
+  </div>
+</footer>
+
+</body>
+</html>
