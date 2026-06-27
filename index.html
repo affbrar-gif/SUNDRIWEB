@@ -50,7 +50,10 @@
       justify-content: center;
     }
     .badge {
-      padding: 14px 24px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 22px;
       background: rgba(200, 151, 43, 0.12);
       border: 1px solid #C8972B;
       border-radius: 14px;
@@ -64,6 +67,30 @@
     .badge:hover {
       background: rgba(200, 151, 43, 0.2);
       transform: translateY(-2px);
+    }
+    .badge svg {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+    }
+    .badge-label {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 1.1;
+    }
+    .badge-label .small {
+      font-size: 9px;
+      letter-spacing: 1px;
+      opacity: 0.75;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+    }
+    .badge-label .big {
+      font-size: 15px;
+      letter-spacing: 0.5px;
+      text-transform: none;
+      font-weight: 600;
     }
     footer {
       position: fixed;
@@ -81,8 +108,27 @@
     A daily dose of beautiful Punjabi suit inspiration. Anarkalis, palazzos, sharara sets, bridal looks — handpicked every day.
   </p>
   <div class="badges">
-    <a href="https://apps.apple.com/app/id6769266287" class="badge" target="_blank" rel="noopener">Download on App Store</a>
-    <a href="https://play.google.com/store/apps/details?id=com.sundri.android" class="badge" target="_blank" rel="noopener">Get it on Play Store</a>
+    <a href="https://apps.apple.com/app/id6769266287" class="badge" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M17.05 12.04c-.03-3.07 2.51-4.55 2.62-4.62-1.43-2.09-3.66-2.38-4.45-2.41-1.89-.19-3.69 1.11-4.65 1.11-.97 0-2.45-1.09-4.03-1.06-2.07.03-3.98 1.2-5.04 3.05-2.15 3.72-.55 9.22 1.55 12.25 1.03 1.48 2.25 3.15 3.85 3.09 1.55-.06 2.13-1 4-1 1.86 0 2.39 1 4.03.97 1.66-.03 2.72-1.51 3.74-3.01 1.18-1.73 1.66-3.41 1.69-3.49-.04-.02-3.24-1.24-3.27-4.93zM14.16 3.21c.86-1.04 1.44-2.48 1.28-3.92-1.24.05-2.74.82-3.63 1.86-.8.92-1.5 2.39-1.31 3.79 1.38.11 2.79-.7 3.66-1.73z"/>
+      </svg>
+      <span class="badge-label">
+        <span class="small">Download on the</span>
+        <span class="big">App Store</span>
+      </span>
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.sundri.android" class="badge" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path fill="#C8972B" d="M3.6 2.27c-.36.38-.57.97-.57 1.73v15.99c0 .76.21 1.35.57 1.73l.05.05L12.6 12v-.21L3.65 2.22z"/>
+        <path fill="#C8972B" d="M15.6 15l-3-3v-.21l3-3 .07.04 3.55 2.02c1.01.57 1.01 1.51 0 2.09l-3.55 2.02z" opacity="0.92"/>
+        <path fill="#C8972B" d="M15.67 14.96L12.6 12 3.6 21.72c.33.35.88.4 1.5.04l10.57-6.8" opacity="0.78"/>
+        <path fill="#C8972B" d="M15.67 9.04L5.1 2.24c-.62-.35-1.17-.31-1.5.04L12.6 12l3.07-2.96z" opacity="0.6"/>
+      </svg>
+      <span class="badge-label">
+        <span class="small">Download on the</span>
+        <span class="big">Play Store</span>
+      </span>
+    </a>
   </div>
   <footer>
     Made in Aotearoa · <a href="/privacy.html">Privacy</a> · <a href="mailto:hello@sundri.app">hello@sundri.app</a>
